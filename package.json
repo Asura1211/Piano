@@ -22,7 +22,7 @@
     "start": "icejs start",
     "build": "icejs build",
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d public",
+    "deploy":"gh-pages -d build",
     "lint": "npm run eslint && npm run stylelint",
     "eslint": "eslint --cache --fix --ext .js,.jsx,.ts,.tsx ./",
     "eslint:fix": "npm run eslint -- --fix",
