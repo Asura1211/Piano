@@ -1,0 +1,50 @@
+.container {
+    border: 1px solid white;
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+}
+.white {
+    width: 2vw;
+    height: 30vh;
+    background-color: white;
+    margin: 3px;
+    display: inline-block;
+    border-radius: 0 0 0.2vw 0.2vw;
+    box-shadow: rgb(173, 173, 173) -2px 2px 1px 1px;
+    .txt {
+        position: relative;
+        top: 24vh;
+        user-select:none;
+    }
+}
+.white:hover{
+    background-color: gainsboro;
+}
+.black {
+    color: white;
+    width: 1.8vw;
+    height: 18vh;
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    margin-top: 3px;
+    margin-left: -1vw;
+    border-radius: 0 0 0.2vw 0.2vw;
+    box-shadow: rgb(173, 173, 173) -2px 2px 1px 1px;
+    .txt {
+        position: relative;
+        top:15vh;
+        user-select:none;
+    }
+}
+.black:hover{
+    background-color: rgb(95, 95, 95);
+}
+.tag{
+    margin: 3px;
+    border-radius: 3px;
+}
+.tag:hover{
+    opacity: 0.5;
+}
