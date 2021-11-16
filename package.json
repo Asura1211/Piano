@@ -1,6 +1,7 @@
 {
   "name": "@alifd/scaffold-lite-js",
   "version": "0.1.0",
+  "homepage": "https://likefrost.github.io/Piano/",
   "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
   "dependencies": {
     "@alifd/next": "^1.19.4",
