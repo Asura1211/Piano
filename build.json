@@ -1,5 +1,6 @@
 {
   "vite": true,
+  "publicPath": "Piano",
   "plugins": [
     [
       "build-plugin-moment-locales",

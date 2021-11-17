@@ -67,13 +67,13 @@ function Piano() {
   ];
   const playMusic = (src) => {
     const player = document.getElementById('music');
-    player.src = `public/music/${ src }.wav.mp3`;
+    player.src = `./music/${ src }.wav.mp3`;
     player.play();
   };
   const overMusic = (src) => {
     if (window.event.buttons === 0) return;
     const player = document.getElementById('music');
-    player.src = `public/music/${ src }.wav.mp3`;
+    player.src = `./music/${ src }.wav.mp3`;
     player.play();
   };
   window.addEventListener('keypress', (e) => {
@@ -87,7 +87,7 @@ function Piano() {
   });
   window.addEventListener('keyup', (e) => {
     const keyUp = document.getElementById(e.key);
-    console.log(e)
+    console.log(e);
     if (!e.shiftKey) {
       keyUp.style = styles.white;
     } else {
@@ -112,7 +112,7 @@ function Piano() {
                   {items.tag}
                 </div>
               </div>
-              <audio src={`public/music/${ items.name }.wav.mp3`} id="music"> </audio>
+              <audio src={`./music/${ items.name }.wav.mp3`} id="music"> </audio>
             </div>
           );
         })
