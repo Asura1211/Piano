@@ -48,3 +48,36 @@
 .tag:hover{
     opacity: 0.5;
 }
+// .currentKey{
+//     position: absolute;
+//     top: 15vh;
+//     left: 50vw;
+//     opacity: 0;
+//     color:antiquewhite; 
+//     animation-name: currentKey;
+//     animation-duration: 1s;
+//     animation-iteration-count: infinite;
+// }
+// @keyframes currentKey {
+//     0% {font-size: 20px; opacity: 0;}
+//     50% {font-size: 40px; opacity: 1;}
+//     100% {font-size: 20px; opacity: 0;}
+// }
+// .now{
+//     color: red;
+// }
+.block{
+    height: 100px;
+    display: inline-block;
+}
+.musicWave{
+    height: 300px;
+}
+.waveBlock{
+    height: 5px;
+    width: 1vw;
+    margin: 0.1vw;
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+}
