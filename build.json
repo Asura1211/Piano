@@ -1,6 +1,6 @@
 {
   "vite": true,
-  "publicPath":"https://likefrost.github.io/Piano/",
+  "publicPath": "Piano",
   "plugins": [
     [
       "build-plugin-moment-locales",

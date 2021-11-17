@@ -70,7 +70,7 @@ function Piano() {
   /* 鼠标点击琴键 */
   const playMusic = (src, key) => {
     const player = document.getElementById('music');
-    player.src = `/music/${ src }.wav.mp3`;
+    player.src = `./music/${ src }.wav.mp3`;
     player.play();
     setKeyHistory([...keyHistory, key]);
     const id = `id${key}`;
@@ -92,7 +92,7 @@ function Piano() {
   const overMusic = (src, key) => {
     if (window.event.buttons === 0) return;
     const player = document.getElementById('music');
-    player.src = `/music/${ src }.wav.mp3`;
+    player.src = `./music/${ src }.wav.mp3`;
     player.play();
     setKeyHistory([...keyHistory, key]);
     const id = `id${key}`;
@@ -215,7 +215,7 @@ function Piano() {
                   {items.tag}
                 </div>
               </div>
-              <audio src={`/music/${ items.name }.wav.mp3`} id="music"> </audio>
+              <audio src={`./music/${ items.name }.wav.mp3`} id="music"> </audio>
             </div>
           );
         })
