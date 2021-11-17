@@ -66,18 +66,22 @@
 // .now{
 //     color: red;
 // }
-.block{
+
+.musicWave{
+    position: relative;
     height: 100px;
+}
+.block{
+    position: relative;
+    height: 100px;
+    width: 18px;
     display: inline-block;
 }
-.musicWave{
-    height: 300px;
-}
 .waveBlock{
+    position: absolute;
     height: 5px;
     width: 1vw;
     margin: 0.1vw;
     display: inline-block;
-    position: relative;
-    bottom: 10px;
+    bottom: 0px;
 }
