@@ -8,7 +8,7 @@ body {
 button{
     background-image: linear-gradient(90deg, #6589e6, #64ddcb);
     border-radius: 10px        ;
-    border: 1px solid #638641; 
+    border: 1px solid #638641;
     color: #ffffff;
     display: inline-block;
     font-size: 1em;
@@ -16,6 +16,9 @@ button{
     padding: 8px;
     cursor: pointer;
     text-shadow: #000000 5px 5px 15px;
+}
+button:focus {
+  outline: none;
 }
 input{
     outline-style: none;
