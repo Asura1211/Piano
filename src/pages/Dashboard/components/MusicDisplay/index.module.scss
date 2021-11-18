@@ -1,7 +1,6 @@
 .left{
-    width: 30vw;
-    margin-left: 10vw;
     text-align: center;
+    margin-left: 5vw;
 }
 .currentKey{  
     height: 50px;
@@ -14,9 +13,11 @@
                 0 4px hsl(0,0%,70%), 
                 0 5px hsl(0,0%,65%),
                 0 5px 10px black;
+    user-select:none;
 }
 .current{
     height: 30px;
     font:20px Rockwell,serif;
     letter-spacing: 2px;
+    user-select:none;
 }

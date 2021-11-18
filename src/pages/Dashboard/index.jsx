@@ -10,15 +10,11 @@ const { Cell } = ResponsiveGrid;
 
 const Dashboard = () => {
   return (
-    <ResponsiveGrid gap={20}>
-      <Cell colSpan={12}>
-        <Piano />
-        <div className={styles.display}>
-          <MusicDisplay />
-          <InputMusic />
-        </div>
-        <MusicWave />
-      </Cell>
+    <ResponsiveGrid gap={20} >
+      <Cell colSpan={12}> <Piano /> </Cell>
+      <Cell colSpan={3}> <MusicDisplay /> </Cell>
+      <Cell colSpan={3}> <InputMusic /> </Cell>
+      <Cell colSpan={12}><MusicWave /> </Cell>
     </ResponsiveGrid>
   );
 };
