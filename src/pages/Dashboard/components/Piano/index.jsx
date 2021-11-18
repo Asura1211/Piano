@@ -31,7 +31,7 @@ function Piano() {
           }
         });
       }
-    }, 20);
+    }, 10);
   };
   /* 鼠标按下划过琴键 */
   const overMusic = (src, key) => {
@@ -54,7 +54,7 @@ function Piano() {
           }
         });
       }
-    }, 20);
+    }, 10);
   };
   /* 键盘操作琴键 */
   useEffect(() => {

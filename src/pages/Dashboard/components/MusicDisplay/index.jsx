@@ -31,7 +31,7 @@ function MusicDisplay() {
       } else {
         clearInterval(timer);
       }
-    }, 400);
+    }, 500);
   };
   /* 删除当前音乐 */
   const currentDelete = () => {

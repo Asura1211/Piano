@@ -30,7 +30,7 @@ function InputMusic() {
       } else {
         clearInterval(timer);
       }
-    }, 300);
+    }, 500);
   };
   return (
     <div className={styles.right}>
