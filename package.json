@@ -2,7 +2,7 @@
   "name": "@alifd/scaffold-lite-js",
   "version": "0.1.0",
   "homepage": "https://likefrost.github.io/Piano/",
-  "description": "轻量级模板，使用 JavaScript，仅包含基础的 Layout。",
+  "description": "阿里前端练习生结课项目",
   "dependencies": {
     "@alifd/next": "^1.19.4",
     "@alifd/theme-design-pro": "0.x",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alibaba-fusion/materials/tree/master/scaffolds/scaffold-lite-js"
+    "url": "https://github.com/LikeFrost/Piano"
   },
   "private": true,
   "originTemplate": "@alifd/scaffold-lite-js"

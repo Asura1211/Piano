@@ -64,7 +64,7 @@ function Piano() {
     { type: 'white', name: 'a6', tag: 'la', color: '#CCFFFF', key: 'b' },
     { type: 'black', name: 'as6', key: 'B', color: '#99CCFF' },
     { type: 'white', name: 'b6', tag: 'si', color: '#CCFFFF', key: 'n' },
-    { type: 'white', name: 'c7', tag: 'do', color: '#CCCCCC', key: 'm' },
+    { type: 'white', name: '-', tag: '-', color: '#CCCCCC', key: 'm' },
   ];
   const [keyHistory, setKeyHistory] = useState([]);
   /* 鼠标点击琴键 */
@@ -76,17 +76,18 @@ function Piano() {
     const id = `id${key}`;
     const wave = document.getElementById(id);
     const add = setInterval(() => {
-      wave.style.height = `${wave.offsetHeight + 5 }px`;
-      if (wave.offsetHeight >= 60) {
+      wave.style.height = `${wave.offsetHeight + 10 }px`;
+      if (wave.offsetHeight >= 150) {
         clearInterval(add);
         const add2 = setInterval(() => {
-          wave.style.height = `${wave.offsetHeight - 5 }px`;
+          wave.style.height = `${wave.offsetHeight - 2 }px`;
           if (wave.offsetHeight <= 5) {
+            wave.style.height = `${5}+px`;
             clearInterval(add2);
           }
         });
       }
-    }, 10);
+    }, 20);
   };
   /* 鼠标按下划过琴键 */
   const overMusic = (src, key) => {
@@ -98,17 +99,17 @@ function Piano() {
     const id = `id${key}`;
     const wave = document.getElementById(id);
     const add = setInterval(() => {
-      wave.style.height = `${wave.offsetHeight + 5 }px`;
-      if (wave.offsetHeight >= 60) {
+      wave.style.height = `${wave.offsetHeight + 10 }px`;
+      if (wave.offsetHeight >= 150) {
         clearInterval(add);
         const add2 = setInterval(() => {
-          wave.style.height = `${wave.offsetHeight - 5 }px`;
+          wave.style.height = `${wave.offsetHeight - 2 }px`;
           if (wave.offsetHeight <= 5) {
             clearInterval(add2);
           }
         });
       }
-    }, 10);
+    }, 20);
   };
   /* 键盘操作琴键 */
   useEffect(() => {
@@ -129,7 +130,7 @@ function Piano() {
         keyUp.style = styles.black;
       }
     });
-  }, 0);
+  }, []);
   /* 播放当前音乐 */
   const currentPlay = () => {
     let i = 0;
@@ -154,7 +155,7 @@ function Piano() {
       } else {
         clearInterval(timer);
       }
-    }, 300);
+    }, 400);
   };
   /* 删除当前音乐 */
   const currentDelete = () => {
@@ -186,16 +187,6 @@ function Piano() {
       }
     }, 300);
   };
-  // const currentKey = document.getElementById('currentKey');
-  // useEffect(() => {
-  //   if (currentKey) {
-  //     currentKey.style.opacity = '1';
-  //     setTimeout(() => {
-  //       currentKey.style.opacity = '1';
-  //       console.log(currentKey.style.opacity)
-  //     }, 200)
-  //   }
-  // }, keyHistory[keyHistory.length - 1])
   return (
     <div >
       <div className={styles.container}>
@@ -207,6 +198,7 @@ function Piano() {
               onClick={playMusic.bind(this, items.name, items.key)}
               onMouseOverCapture={overMusic.bind(this, items.name, items.key)}
               id={items.key}
+              key={items.key}
             >
               <div className={styles.txt}>
                 {items.key}
@@ -221,24 +213,27 @@ function Piano() {
         })
       }
       </div>
-      <Animate animation={{
-        enter: 'my-zoom-in',
-        leave: 'my-zoom-out',
-      }}
-      >
-        <div className={styles.currentKey} id="currentKey">{keyHistory[keyHistory.length - 1]}</div>
-      </Animate>
-      <div className={styles.current}>{keyHistory}</div>
-      <button className={styles.play} onClick={currentPlay}>播放当前音乐</button>
-      <button className={styles.delete} onClick={currentDelete}>清空当前音乐</button>
-      <br />
-      <input className={styles.input} id="input" placeholder="请将要播放的音乐粘贴到此处" />
-      <button className={styles.playInput} onClick={inputPlay}>播放输入的音乐</button>
-      <div className={styles.musicWave}>
+      <div className={styles.display}>
+        <div className={styles.left}>
+          <div className={styles.currentKey} id="currentKey">{keyHistory[keyHistory.length - 1]}</div>
+          <div className={styles.current}>{keyHistory.length < 20 ? keyHistory : keyHistory.slice(keyHistory.length - 20)}</div>
+          <button className={styles.play} onClick={currentPlay}>播放当前音乐</button>
+          <button className={styles.delete} onClick={currentDelete}>清空当前音乐</button>
+        </div>
+
+        <div className={styles.right}>
+          <div className={styles.input}>
+            <input id="input" placeholder="请将要播放的音乐粘贴到此处" />
+          </div>
+          <button className={styles.playInput} onClick={inputPlay}>播放输入的音乐</button>
+        </div>
+      </div>
+
+      <div className={styles.musicWave} >
         {
           keys.map((items) => {
             return (
-              <div className={styles.block}>
+              <div className={styles.block} key={items.key}>
                 <div className={styles.waveBlock} id={`id${items.key}`} style={{ backgroundColor: items.color }}> </div>
               </div>
             );

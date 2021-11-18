@@ -70,39 +70,58 @@ input{
     /* font-weight: 700; */
     font-family: "Microsoft soft";
 }
-// .currentKey{
-//     position: absolute;
-//     top: 15vh;
-//     left: 50vw;
-//     opacity: 0;
-//     color:antiquewhite; 
-//     animation-name: currentKey;
-//     animation-duration: 1s;
-//     animation-iteration-count: infinite;
-// }
-// @keyframes currentKey {
-//     0% {font-size: 20px; opacity: 0;}
-//     50% {font-size: 40px; opacity: 1;}
-//     100% {font-size: 20px; opacity: 0;}
-// }
-// .now{
-//     color: red;
-// }
 
+.display{
+    display: flex;
+}
+.left{
+    width: 30vw;
+    margin-left: 10vw;
+    text-align: center;
+}
+.right{
+    width: 30vw;
+    flex:1;
+}
+.currentKey{  
+    height: 50px;
+    margin-top: -10px;
+    color: white;
+    font:40px Rockwell,serif;
+    text-shadow: 0 1px hsl(0,0%,85%),
+                0 2px hsl(0,0%,80%),
+                0 3px hsl(0,0%,75%), 
+                0 4px hsl(0,0%,70%), 
+                0 5px hsl(0,0%,65%),
+                0 5px 10px black;
+}
+.current{
+    height: 30px;
+    font:20px Rockwell,serif;
+    letter-spacing: 2px;
+}
+.input{
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
 .musicWave{
-    position: relative;
-    height: 100px;
+    height: 200px;
+    width: 63vw;
+    border: 1px solid white;
+    margin: 20px;
+    padding: 0 20px;
 }
 .block{
     position: relative;
-    height: 100px;
-    width: 18px;
+    height: 200px;
+    width: 14px;
     display: inline-block;
 }
 .waveBlock{
     position: absolute;
     height: 5px;
-    width: 1vw;
+    width: 0.8vw;
     margin: 0.1vw;
     display: inline-block;
     bottom: 0px;
