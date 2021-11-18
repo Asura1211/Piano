@@ -1,0 +1,21 @@
+.musicWave{
+    height: 200px;
+    width: 63vw;
+    border: 1px solid white;
+    margin: 20px;
+    padding: 0 20px;
+}
+.block{
+    position: relative;
+    height: 200px;
+    width: 14px;
+    display: inline-block;
+}
+.waveBlock{
+    position: absolute;
+    height: 5px;
+    width: 0.8vw;
+    margin: 0.1vw;
+    display: inline-block;
+    bottom: 0px;
+}

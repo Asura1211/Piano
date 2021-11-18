@@ -1,0 +1,22 @@
+.left{
+    width: 30vw;
+    margin-left: 10vw;
+    text-align: center;
+}
+.currentKey{  
+    height: 50px;
+    margin-top: -10px;
+    color: white;
+    font:40px Rockwell,serif;
+    text-shadow: 0 1px hsl(0,0%,85%),
+                0 2px hsl(0,0%,80%),
+                0 3px hsl(0,0%,75%), 
+                0 4px hsl(0,0%,70%), 
+                0 5px hsl(0,0%,65%),
+                0 5px 10px black;
+}
+.current{
+    height: 30px;
+    font:20px Rockwell,serif;
+    letter-spacing: 2px;
+}
