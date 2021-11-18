@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styles from './index.module.scss';
-import { Animate } from '@alifd/next';
 
 function Piano() {
   const keys = [
@@ -72,6 +71,7 @@ function Piano() {
     const player = document.getElementById('music');
     player.src = `./music/${ src }.wav.mp3`;
     player.play();
+    popNote();
     setKeyHistory([...keyHistory, key]);
     const id = `id${key}`;
     const wave = document.getElementById(id);
@@ -95,6 +95,7 @@ function Piano() {
     const player = document.getElementById('music');
     player.src = `./music/${ src }.wav.mp3`;
     player.play();
+    popNote();
     setKeyHistory([...keyHistory, key]);
     const id = `id${key}`;
     const wave = document.getElementById(id);
@@ -186,6 +187,36 @@ function Piano() {
         clearInterval(timer);
       }
     }, 300);
+  };
+  /* 出现音符 */
+  const popNote = () => {
+    const imgObj = document.createElement('img');
+    imgObj.setAttribute('src', './img/note.svg');
+    const width = Math.random() * 50 + 20;
+    imgObj.setAttribute('width', width);
+    const opacity = Math.random();
+    imgObj.setAttribute('opacity', opacity);
+    const { offsetWidth } = document.body;
+    const { offsetHeight } = document.body;
+    const x = Math.random() * 200 + 0.7 * offsetWidth;
+    const y = Math.random() * 200 + 0.6 * offsetHeight;
+    imgObj.setAttribute('style', `position:absolute; left:${ x }px; top:${ y }px;`);
+    document.body.append(imgObj);
+    upNote(imgObj);
+  };
+  /* 音符上升 */
+  const upNote = (Obj) => {
+    let speed = 0;
+    const timer = setInterval(() => {
+      if (Obj.offsetTop - speed >= 0) {
+        Obj.style.top = `${Obj.offsetTop - speed }px`;
+        Obj.style.left = `${Obj.offsetLeft - speed * Math.random() }px`;
+        speed += 0.05;
+      } else {
+        document.body.removeChild(Obj);
+        clearInterval(timer);
+      }
+    }, 10);
   };
   return (
     <div >
