@@ -87,7 +87,7 @@ function Piano() {
     const { offsetWidth } = document.body;
     const { offsetHeight } = document.body;
     const x = Math.random() * 200 + 0.6 * offsetWidth;
-    const y = Math.random() * 200 + 0.5 * offsetHeight;
+    const y = Math.random() * 200 + 0.4 * offsetHeight;
     imgObj.setAttribute('style', `position:absolute; left:${ x }px; top:${ y }px;`);
     document.body.append(imgObj);
     upNote(imgObj);
