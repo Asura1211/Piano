@@ -61,7 +61,7 @@ export default {
       { type: 'white', name: 'a6', tag: 'la', color: '#CCFFFF', key: 'b' },
       { type: 'black', name: 'as6', key: 'B', color: '#99CCFF' },
       { type: 'white', name: 'b6', tag: 'si', color: '#CCFFFF', key: 'n' },
-      { type: 'white', name: '-', tag: '-', color: '#CCCCCC', key: 'm' },
+      { type: 'white', name: '-', tag: '-', color: '#CCCCCC', key: '-' },
     ],
   },
 };
