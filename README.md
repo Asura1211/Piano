@@ -3,7 +3,7 @@
 
 #### 界面效果
 
-![image-20211119151315732](D:\ZDG\阿里课程\Piano\preview.png)
+![image-20211119151315732](preview.png)
 
 #### 在线预览地址
 
