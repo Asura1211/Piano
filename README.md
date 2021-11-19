@@ -31,25 +31,25 @@ npm start
 #### 文件结构
 
 ```
-├─public							//全局资源
+├─public							              //全局资源
 │  ├─img
 │  └─music
 ├─src
-|   ├─models						//全局状态
-|   └─pages							//页面
+|   ├─models						            //全局状态
+|   └─pages							            //页面
 |   |   └─Dashboard
-|   |        └─components			//页面组件
-|   |        |  ├─InputMusic		//输入音乐框
-|   |        |  ├─MusicDisplay		//显示音乐组件
-|   |        |  ├─MusicWave			//音乐可视化组件
-|   |        |  └─Piano				//钢琴组件
-|   |        ├─index.jsx			//页面入口		
+|   |        └─components			      //页面组件
+|   |        |  ├─InputMusic		    //输入音乐框
+|   |        |  ├─MusicDisplay		  //显示音乐组件
+|   |        |  ├─MusicWave			    //音乐可视化组件
+|   |        |  └─Piano				      //钢琴组件
+|   |        ├─index.jsx			      //页面入口		
 |   |        └─index.module.scss
-|   ├─app.jsx						//应用入口
-|   ├─global.css					//全局css配置
-|   ├─routes.js						//路由配置
-|   └─store.js						//store
-├─build.json        // 工程配置
+|   ├─app.jsx						            //应用入口
+|   ├─global.css					          //全局css配置
+|   ├─routes.js						          //路由配置
+|   └─store.js						          //store
+├─build.json                        // 工程配置
 └─package.json
 ```
 
