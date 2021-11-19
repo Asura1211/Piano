@@ -3,7 +3,7 @@
 
 #### 界面效果
 
-![image-20211119151315732](C:\Users\13422\AppData\Roaming\Typora\typora-user-images\image-20211119151315732.png)
+![image-20211119151315732](D:\ZDG\阿里课程\Piano\preview.png)
 
 #### 在线预览地址
 
