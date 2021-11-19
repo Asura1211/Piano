@@ -12,9 +12,10 @@ https://likefrost.github.io/Piano
 ### 快速开始
 
 ```
+git clone https://likefrost.github.io/Piano
 cd Piano
-npm install
-npm start
+yarn install
+yarn start
 ```
 
 ### 项目开发
@@ -76,7 +77,34 @@ npm run lint
 
 ### 项目部署
 
+项目使用`Github`的`Action workflows`进行流水线自动部署，当从本地进行推送时自动运行构建程序，启动流水线使用`yarn`打包构建，并将构建生成的文件推送到`gh-pages`分支，以即时预览。
 
+```yaml
+name: publish gh-page
 
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2 
+        with:
+          persist-credentials: false
 
+      - name: install and build  
+        run: |
+          yarn install
+          yarn run build
+
+      - name: deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build 
+```
