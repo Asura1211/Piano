@@ -40,7 +40,7 @@ function MusicDisplay() {
   return (
     <div className={styles.left}>
       <div className={styles.currentKey} id="currentKey">{keyHistory[keyHistory.length - 1]}</div>
-      <div className={styles.current}>{keyHistory.length < 20 ? keyHistory : keyHistory.slice(keyHistory.length - 20)}</div>
+      <div className={styles.current}>{keyHistory.length < 15 ? keyHistory : keyHistory.slice(keyHistory.length - 15)}</div>
       <button className={styles.play} onClick={currentPlay}>播放当前音乐</button>
       <button className={styles.delete} onClick={currentDelete}>清空当前音乐</button>
     </div>
