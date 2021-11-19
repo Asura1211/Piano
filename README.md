@@ -1,15 +1,15 @@
 # Piano
  阿里前端练习生结课项目
 
-#### 界面效果
+### 界面效果
 
 ![image-20211119151315732](preview.png)
 
-#### 在线预览地址
+### 在线预览地址
 
 https://likefrost.github.io/Piano
 
-#### 快速开始
+### 快速开始
 
 ```
 cd Piano
@@ -17,18 +17,18 @@ npm install
 npm start
 ```
 
-#### 项目开发
+### 项目开发
 
 本项目基于 [React](https://reactjs.org/) + [icejs](https://ice.work/) + [Fusion Design](https://fusion.design/)
 
-#### 项目功能
+### 项目功能
 
 - 弹奏钢琴，记录用户操作历史
 - 播放用户弹奏历史
 - 播放用户输入的音乐
 - 动态显示当前音频柱状图及随机音符
 
-#### 文件结构
+### 文件结构
 
 ```
 ├─public                            //全局资源
@@ -53,7 +53,7 @@ npm start
 └─package.json
 ```
 
-#### 代码规范
+### 代码规范
 
 使用 eslint 规则，遵循[阿里巴巴前端规范](https://f2e.alibaba-inc.com/specification/)
 
@@ -74,5 +74,5 @@ npm start
 npm run lint
 ```
 
-#### 项目部署
+### 项目部署
 
